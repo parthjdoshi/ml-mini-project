@@ -19,7 +19,6 @@ def import_data():
         # Opening the file
         file = pd.read_csv(f, sep='\t')
         # Getting the label
-        print(f)
         l = os.path.basename(f).split('-')[0]
         # Adding the data to the list for that particular class label
         fixed_length_file = signal.resample(file, 57, axis=0)
@@ -70,5 +69,4 @@ def create_data_tensor():
 def flatten_data(X):
     return X.swapaxes(1,2).reshape((X.shape[0], X.shape[1]*X.shape[2]))
 
-X, y, class_names = create_data_tensor()
         
