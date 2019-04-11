@@ -1,15 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-It converts the Auslan dataset into two CSV files.
-
-1. data.csv: Each line contains a single example.
-
-Each example is a vector with 22*57 value. 
-The first 22 values represent the 22 features in the first frame, and so on.
-
-2. labels.csv: Each line contains a single label, stored as a string. 
-
-"""
 
 import os
 import pandas as pd
